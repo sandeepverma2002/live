@@ -7,6 +7,9 @@ WORKDIR /app
 # Copy the built jar file into the container
 COPY target/usercrudapi.jar app.jar
 
+# Print the contents of the directory for debugging
+RUN ls -la /app
+
 # Expose the application port
 EXPOSE 8080
 
